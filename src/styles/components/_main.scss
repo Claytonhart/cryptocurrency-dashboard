@@ -1,0 +1,9 @@
+.container {
+  min-height: 80rem;
+  max-width: 140rem;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  background-color: $color-background-blue;
+  color: #fff;
+  margin: 10rem auto;
+  display: flex;
+}
