@@ -18,8 +18,8 @@
     position: relative;
     display: flex;
     margin: 3rem 0;
-    padding: 1.5rem 0;
-    padding-left: 4rem;
+    // padding: 1.5rem 0;
+    // padding-left: 4rem;
     color: $color-text-grey;
     flex: 1;
     cursor: pointer;
@@ -29,6 +29,8 @@
       text-decoration: none;
       z-index: 10;
       display: flex;
+      padding: 1.5rem 0;
+      padding-left: 4rem;
     }
 
     &:hover {
