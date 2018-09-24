@@ -8,25 +8,35 @@ class Sidebar extends Component {
       <nav className="sidebar">
         <ul className="side-nav">
           <li className="side-nav__logo">logo</li>
-          <li className="side-nav__item">
-            <Browser className="side-nav__img" />
-            <span>Dashboard</span>
+          <li className="side-nav__item side-nav__item--active">
+            <a href="#">
+              <Browser className="side-nav__img" />
+              <span>Dashboard</span>
+            </a>
           </li>
           <li className="side-nav__item">
-            <Browser className="side-nav__img" />
-            <span>Transactions</span>
+            <a href="#">
+              <Browser className="side-nav__img" />
+              <span>Transactions</span>
+            </a>
           </li>
           <li className="side-nav__item">
-            <BarGraph className="side-nav__img" />
-            <span>Exchange</span>
+            <a href="#">
+              <BarGraph className="side-nav__img" />
+              <span>Exchange</span>
+            </a>
           </li>
           <li className="side-nav__item">
-            <Folder className="side-nav__img" />
-            <span>History</span>
+            <a href="#">
+              <Folder className="side-nav__img" />
+              <span>History</span>
+            </a>
           </li>
           <li className="side-nav__item">
-            <Cog className="side-nav__img" />
-            <span>Settings</span>
+            <a href="#">
+              <Cog className="side-nav__img" />
+              <span>Settings</span>
+            </a>
           </li>
         </ul>
         <div className="color-mode">Dark mode</div>
