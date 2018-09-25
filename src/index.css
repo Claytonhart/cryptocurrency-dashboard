@@ -16,7 +16,12 @@ html {
 
 body {
   box-sizing: border-box;
-  background-color: #c3c6d1; }
+  background-color: #c3c6d1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw; }
 
 body {
   font-family: "Montserrat", sans-serif; }
@@ -24,10 +29,10 @@ body {
 .container {
   min-height: 80rem;
   max-width: 140rem;
+  min-width: 140rem;
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   background-color: #20273e;
   color: #fff;
-  margin: 10rem auto;
   display: flex; }
 
 .main {
