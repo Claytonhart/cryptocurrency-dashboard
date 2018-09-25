@@ -9,31 +9,31 @@ class Sidebar extends Component {
         <ul className="side-nav">
           <li className="side-nav__logo">logo</li>
           <li className="side-nav__item side-nav__item--active">
-            <a href="#">
+            <a href="#main">
               <Browser className="side-nav__img" />
               <span>Dashboard</span>
             </a>
           </li>
           <li className="side-nav__item">
-            <a href="#">
+            <a href="#main">
               <Browser className="side-nav__img" />
               <span>Transactions</span>
             </a>
           </li>
           <li className="side-nav__item">
-            <a href="#">
+            <a href="#main">
               <BarGraph className="side-nav__img" />
               <span>Exchange</span>
             </a>
           </li>
           <li className="side-nav__item">
-            <a href="#">
+            <a href="#main">
               <Folder className="side-nav__img" />
               <span>History</span>
             </a>
           </li>
           <li className="side-nav__item">
-            <a href="#">
+            <a href="#main">
               <Cog className="side-nav__img" />
               <span>Settings</span>
             </a>

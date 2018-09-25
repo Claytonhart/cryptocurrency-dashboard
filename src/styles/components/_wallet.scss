@@ -1,13 +1,13 @@
 .wallet {
   width: 27.5rem;
-  border: 1px solid $color-text-dark-grey;
+  border: $border-light-grey;
   border-radius: 2px;
 }
 
 .currency-info {
   position: relative;
   display: flex;
-  border-bottom: 1px solid $color-text-dark-grey;
+  border-bottom: $border-light-grey;
   color: $color-text-grey;
   height: calc(7.5rem - 1px);
 
@@ -51,7 +51,6 @@
 
 .price-history {
   &__container {
-    list-style: none;
     padding: 1.5rem 2.7rem;
   }
 

@@ -3,6 +3,7 @@ import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 import CryptoChart from "./CryptoChart";
 import WalletList from "./WalletList";
+import TransactionHistory from "./TransactionHistory";
 
 class Main extends Component {
   render() {
@@ -15,6 +16,9 @@ class Main extends Component {
             <div className="main-column">
               <CryptoChart />
               <WalletList />
+            </div>
+            <div className="side-column">
+              <TransactionHistory />
             </div>
           </div>
         </section>
