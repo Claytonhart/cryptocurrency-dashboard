@@ -2,10 +2,6 @@
   width: 27.5rem;
   border: 1px solid $color-text-dark-grey;
   border-radius: 2px;
-
-  &:not(:last-of-type) {
-    margin-right: 2rem;
-  }
 }
 
 .currency-info {

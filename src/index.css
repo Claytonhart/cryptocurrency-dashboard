@@ -186,8 +186,6 @@ body {
   width: 27.5rem;
   border: 1px solid #42475f;
   border-radius: 2px; }
-  .wallet:not(:last-of-type) {
-    margin-right: 2rem; }
 
 .currency-info {
   position: relative;
@@ -238,4 +236,5 @@ body {
 
 .wallet-list {
   margin-top: 0.5rem;
-  display: flex; }
+  display: flex;
+  justify-content: space-between; }
