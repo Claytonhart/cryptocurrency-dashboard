@@ -1,0 +1,74 @@
+.wallet {
+  width: 27.5rem;
+  border: 1px solid $color-text-dark-grey;
+  border-radius: 2px;
+
+  &:not(:last-of-type) {
+    margin-right: 2rem;
+  }
+}
+
+.currency-info {
+  position: relative;
+  display: flex;
+  border-bottom: 1px solid $color-text-dark-grey;
+  color: $color-text-grey;
+  height: calc(7.5rem - 1px);
+
+  &__icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: currentColor;
+  }
+
+  &__icon-background {
+    position: absolute;
+    background-color: #182035;
+    width: 7.5rem;
+    height: 7.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-1px, -1px);
+    border-radius: 2px;
+  }
+
+  &__currency {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 9.2rem;
+
+    p {
+      color: $color-text-grey;
+      font-size: 1.1rem;
+      line-height: 2rem;
+    }
+
+    h3 {
+      font-size: 2.4rem;
+      color: #fff;
+      font-weight: 400;
+    }
+  }
+}
+
+.price-history {
+  &__container {
+    list-style: none;
+    padding: 1.5rem 2.7rem;
+  }
+
+  &__item {
+    color: $color-text-grey;
+    font-size: 1.2rem;
+
+    span {
+      color: #fff;
+      float: right;
+    }
+    &:not(:last-of-type) {
+      padding-bottom: 1rem;
+    }
+  }
+}

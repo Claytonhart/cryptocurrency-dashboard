@@ -178,6 +178,64 @@ body {
     text-align: end; }
 
 .cryptochart {
-  height: 77%; }
+  height: 75%; }
   .cryptochart__title {
     font-size: 3rem; }
+
+.wallet {
+  width: 27.5rem;
+  border: 1px solid #42475f;
+  border-radius: 2px; }
+  .wallet:not(:last-of-type) {
+    margin-right: 2rem; }
+
+.currency-info {
+  position: relative;
+  display: flex;
+  border-bottom: 1px solid #42475f;
+  color: #878d9f;
+  height: calc(7.5rem - 1px); }
+  .currency-info__icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: currentColor; }
+  .currency-info__icon-background {
+    position: absolute;
+    background-color: #182035;
+    width: 7.5rem;
+    height: 7.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-1px, -1px);
+    border-radius: 2px; }
+  .currency-info__currency {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 9.2rem; }
+    .currency-info__currency p {
+      color: #878d9f;
+      font-size: 1.1rem;
+      line-height: 2rem; }
+    .currency-info__currency h3 {
+      font-size: 2.4rem;
+      color: #fff;
+      font-weight: 400; }
+
+.price-history__container {
+  list-style: none;
+  padding: 1.5rem 2.7rem; }
+
+.price-history__item {
+  color: #878d9f;
+  font-size: 1.2rem; }
+  .price-history__item span {
+    color: #fff;
+    float: right; }
+  .price-history__item:not(:last-of-type) {
+    padding-bottom: 1rem; }
+
+.wallet-list {
+  margin-top: 0.5rem;
+  display: flex; }

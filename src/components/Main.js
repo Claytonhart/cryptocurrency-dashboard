@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 import CryptoChart from "./CryptoChart";
+import WalletList from "./WalletList";
 
 class Main extends Component {
   render() {
@@ -13,6 +14,7 @@ class Main extends Component {
           <div className="main-content">
             <div className="main-column">
               <CryptoChart />
+              <WalletList />
             </div>
           </div>
         </section>
