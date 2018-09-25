@@ -30,6 +30,11 @@ body {
   margin: 10rem auto;
   display: flex; }
 
+.main {
+  margin: 2rem;
+  margin-left: 8rem;
+  width: 100%; }
+
 .sidebar {
   flex: 0 0 15%;
   display: flex;
@@ -43,19 +48,115 @@ body {
   .side-nav__logo {
     margin: 2.5rem 0; }
   .side-nav__item {
+    position: relative;
     display: flex;
     margin: 3rem 0;
-    padding: 1.5rem 0;
-    padding-left: 3rem;
     color: #878d9f;
     flex: 1;
-    border-left: 4px solid #20273e;
     cursor: pointer; }
+    .side-nav__item a {
+      color: inherit;
+      text-decoration: none;
+      z-index: 10;
+      display: flex;
+      padding: 1.5rem 0;
+      padding-left: 4rem; }
     .side-nav__item:hover {
+      color: #fff; }
+    .side-nav__item--active {
       color: #fff;
-      border-left: 4px solid #617ae2; }
+      background-color: #617ae2; }
+    .side-nav__item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 3px;
+      background-color: #617ae2;
+      transform: scaleY(0);
+      transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
+    .side-nav__item:hover::before {
+      transform: scaleY(1);
+      width: 100%; }
   .side-nav__img {
     height: 1.75rem;
     width: 1.75rem;
     margin-right: 1rem;
     fill: currentColor; }
+
+.searchbar {
+  background-color: #20273e;
+  color: #878d9f;
+  display: flex;
+  align-items: center;
+  flex: 0 0 40%; }
+  .searchbar__input {
+    background-color: #20273e;
+    color: #878d9f;
+    border: none;
+    padding: 0.9rem 2.2rem;
+    padding-left: 4rem;
+    margin-left: -3rem;
+    font-family: inherit;
+    transition: all 0.2s;
+    width: 90%;
+    border: 1px solid #20273e; }
+    .searchbar__input:focus {
+      outline: none;
+      border: 1px solid #878d9f;
+      border-radius: 100px; }
+    .searchbar__input::placeholder {
+      font-size: 1.1rem; }
+  .searchbar__search-img {
+    height: 1.75rem;
+    width: 1.75rem;
+    fill: currentColor;
+    z-index: 2; }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 3rem; }
+
+.masthead {
+  display: flex;
+  align-items: center; }
+
+.masthead-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 12rem;
+  color: #878d9f;
+  margin: 0 4rem; }
+  .masthead-icons__icon {
+    height: 2.25rem;
+    width: 2.25rem;
+    fill: currentColor;
+    cursor: pointer; }
+    .masthead-icons__icon--grid {
+      height: 2.5rem;
+      width: 2.5rem;
+      transform: translateY(-1px); }
+    .masthead-icons__icon--down-arrow {
+      height: 2.5rem;
+      width: 2.5rem;
+      color: #878d9f;
+      transform: translateY(0.4rem); }
+    .masthead-icons__icon:hover {
+      color: #fff; }
+
+.masthead-about {
+  display: flex;
+  flex-direction: column;
+  margin-right: 0.5rem; }
+  .masthead-about__name {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2rem;
+    letter-spacing: 0.1rem;
+    cursor: pointer; }
+  .masthead-about__job-title {
+    color: #878d9f;
+    text-align: end; }

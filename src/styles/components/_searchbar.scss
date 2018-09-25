@@ -1,0 +1,39 @@
+.searchbar {
+  background-color: $color-background-blue;
+  color: $color-text-grey;
+  // height: 7rem;
+  display: flex;
+  align-items: center;
+  // margin-left: 5rem;
+  flex: 0 0 40%;
+
+  &__input {
+    background-color: $color-background-blue;
+    color: $color-text-grey;
+    border: none;
+    padding: 0.9rem 2.2rem;
+    padding-left: 4rem;
+    margin-left: -3rem;
+    font-family: inherit;
+    transition: all 0.2s;
+    width: 90%;
+    border: 1px solid $color-background-blue;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $color-text-grey;
+      border-radius: 100px;
+    }
+
+    &::placeholder {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__search-img {
+    height: 1.75rem;
+    width: 1.75rem;
+    fill: currentColor;
+    z-index: 2;
+  }
+}
