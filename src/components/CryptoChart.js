@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import axios from "axios";
+
 import Highcharts from "highcharts/highstock";
 import {
   HighchartsStockChart,
@@ -22,6 +24,10 @@ class CryptoChart extends Component {
     };
   }
 
+  componentDidMount() {
+    this.getCryptoHistoryData();
+  }
+
   createDataPoint = (time = Date.now(), magnitude = 1000, offset = 0) => {
     return [
       time + offset * magnitude,
@@ -38,10 +44,27 @@ class CryptoChart extends Component {
     return data;
   };
 
+  getCryptoHistoryData = async (coinName = "BTC") => {
+    const url = `https://min-api.cryptocompare.com/data/histoday?fsym=${coinName}&tsym=USD&limit=2000&aggregate=1&e=CCCAGG`;
+    let response = await axios.get(url);
+    const { Data } = response.data;
+    let data = [];
+
+    Data.forEach(day => {
+      // The api returns an object with empty values for each time even if a coin
+      // didn't exist at the time, so we filter out values of 0 price
+      if (day.open !== 0) {
+        // convert date format as it is returned as (YYYYMMDD) and we need (YYYYMMDDHHMMSS)
+        data.push([day.time * 1000, day.open]);
+      }
+    });
+    this.setState({ data });
+  };
+
   render() {
     return (
       <section className="cryptochart">
-        <h1 className="cryptochart__title">Bitcoin</h1>
+        <h1 className="cryptochart__title">Bitcoin (BTC)</h1>
         <HighchartsStockChart>
           <Chart
             onClick={this.handleClick}
@@ -85,7 +108,7 @@ class CryptoChart extends Component {
               id="bitcoin"
               name="Bitcoin price"
               // data={[[1, 12], [2, 34], [3, 95], [4, 92], [5, 12], [6, 34]]}
-              data={this.state.data1}
+              data={this.state.data}
             />
           </YAxis>
 
