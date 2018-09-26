@@ -186,7 +186,70 @@ body {
     text-align: end; }
 
 .cryptochart__title {
-  font-size: 3rem; }
+  font-size: 3rem;
+  margin-bottom: 2rem; }
+
+.highcharts-yaxis-grid .highcharts-grid-line {
+  stroke: rgba(135, 141, 159, 0.4) !important; }
+
+.highcharts-axis-labels text {
+  color: #878d9f !important;
+  fill: #878d9f !important; }
+
+.highcharts-yaxis-labels {
+  transform: translateX(2.2rem); }
+
+.highcharts-yaxis {
+  transform: translateX(1.6rem); }
+
+.highcharts-axis-title {
+  color: #878d9f !important;
+  fill: #878d9f !important; }
+
+.highcharts-graph {
+  stroke: #617ae2; }
+
+.highcharts-navigator-handle {
+  fill: #42475f;
+  stroke: #878d9f; }
+
+.highcharts-navigator-outline {
+  stroke: #878d9f; }
+
+.highcharts-navigator-mask-inside {
+  fill: rgba(97, 122, 226, 0.2); }
+
+.highcharts-range-selector-buttons {
+  transform: translate(71%, 0px); }
+
+.highcharts-button-pressed .highcharts-button-box {
+  fill: #42475f; }
+
+.highcharts-button-pressed text {
+  color: #fff !important;
+  fill: #fff !important;
+  font-weight: 400 !important; }
+
+.highcharts-button-hover .highcharts-button-box {
+  fill: #42475f; }
+
+.highcharts-button-hover text {
+  color: #fff !important;
+  fill: #fff !important;
+  font-weight: 400 !important; }
+
+.highcharts-button-normal .highcharts-button-box {
+  fill: #19223a !important; }
+
+.highcharts-button-normal text {
+  color: #878d9f !important;
+  fill: #878d9f !important; }
+
+.highcharts-button-disabled .highcharts-button-box {
+  fill: #878d9f; }
+
+.highcharts-tooltip text tspan:nth-child(2) {
+  fill: #617ae2 !important; }
 
 .wallet {
   width: 27.5rem;
