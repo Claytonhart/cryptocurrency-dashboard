@@ -10,7 +10,8 @@ class Wallet extends Component {
             <Credit className="currency-info__icon" />
           </div>
           <div className="currency-info__currency">
-            <p>20 Litecoin</p>
+            <div className="currency-info__triangle" />
+            <p>20 Bitcoin</p>
             <h3>$6945</h3>
           </div>
         </div>
