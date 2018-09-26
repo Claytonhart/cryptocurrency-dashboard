@@ -18,20 +18,20 @@ class TransactionPieChart extends Component {
   render() {
     const pieData = [
       {
-        name: "Jane",
-        y: 13
-      },
-      {
-        name: "John",
+        name: "Bitcoin",
         y: 23
       },
       {
-        name: "Joe",
-        y: 19
+        name: "Litecoin",
+        y: 7
+      },
+      {
+        name: "Etherium",
+        y: 11
       }
     ];
 
-    const pieColors = ["#2D3F8F", "#42475f", "#617ae2"];
+    const pieColors = ["#2D3F8F", "#617ae2", "#42475f"];
 
     return (
       <HighchartsChart>
@@ -40,10 +40,10 @@ class TransactionPieChart extends Component {
         <PieSeries
           name="Total consumption"
           data={pieData}
-          size={230}
+          size={240}
           showInLegend={true}
           dataLabels={{ enabled: false }}
-          innerSize="40%"
+          innerSize="50%"
           borderColor={"#20273e"}
           colors={pieColors}
         />

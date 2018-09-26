@@ -25,7 +25,7 @@ class CryptoChart extends Component {
   createDataPoint = (time = Date.now(), magnitude = 1000, offset = 0) => {
     return [
       time + offset * magnitude,
-      Math.round(Math.random() * 10000 * 2) / 2
+      Math.round(Math.random() * 100 * 2) / 2 + 6000
     ];
   };
 
