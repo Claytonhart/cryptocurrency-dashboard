@@ -305,8 +305,7 @@ body {
 .wallet-list {
   margin-top: 0.5rem;
   display: flex;
-  justify-content: space-between;
-  transform: translateY(-4px); }
+  justify-content: space-between; }
 
 .transaction-history {
   color: #878d9f; }
@@ -317,7 +316,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1.5rem; }
+  padding: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 0; }
   .transaction-chart__header {
     font-size: 1.2rem;
     opacity: 0.8;
@@ -326,7 +327,9 @@ body {
     height: 1.5rem;
     width: 1.5rem;
     transform: translateY(3px);
-    fill: currentColor; }
+    margin-left: 1px;
+    fill: currentColor;
+    cursor: pointer; }
   .transaction-chart__list {
     display: flex;
     justify-content: space-between; }
@@ -354,7 +357,21 @@ body {
       color: #878d9f;
       font-size: 0.9rem; }
   .transaction-list__icon {
-    color: green;
+    color: #03af81;
     fill: currentColor; }
     .transaction-list__icon--down {
-      color: red; }
+      color: #d54153; }
+
+.transaction-chart__chart .highcharts-container {
+  height: 25rem !important; }
+
+.transaction-chart__chart .highcharts-root {
+  height: 25rem !important; }
+
+.transaction-chart__chart .highcharts-legend-item text tspan {
+  font-size: 1.8rem !important;
+  font-weight: 400 !important;
+  fill: #878d9f !important; }
+
+.transaction-chart__chart .highcharts-tooltip text tspan:nth-child(1) {
+  font-size: 1.4rem !important; }

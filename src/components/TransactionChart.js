@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { DownArrow } from "./svg/Svg";
+import TransactionPieChart from "./TransactionPieChart";
 
 class TransactionChart extends Component {
   render() {
@@ -11,12 +12,14 @@ class TransactionChart extends Component {
             <DownArrow className="transaction-chart__arrow" />
           </span>
         </h3>
-        <div className="transaction-chart__chart">chart</div>
-        <ul className="transaction-chart__list">
+        <div className="transaction-chart__chart">
+          <TransactionPieChart />
+        </div>
+        {/* <ul className="transaction-chart__list">
           <li>Litecoin</li>
           <li>Bitcoin</li>
           <li>Etherium</li>
-        </ul>
+        </ul> */}
       </section>
     );
   }

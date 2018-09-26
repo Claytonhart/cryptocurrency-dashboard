@@ -9,6 +9,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-jsx-highcharts": "^3.2.1",
     "react-jsx-highstock": "^3.2.1",
     "react-scripts": "1.1.5"
   },

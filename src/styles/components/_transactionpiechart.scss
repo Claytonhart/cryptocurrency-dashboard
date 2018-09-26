@@ -1,0 +1,17 @@
+.transaction-chart__chart .highcharts-container {
+  height: 25rem !important;
+}
+
+.transaction-chart__chart .highcharts-root {
+  height: 25rem !important;
+}
+
+.transaction-chart__chart .highcharts-legend-item text tspan {
+  font-size: 1.8rem !important;
+  font-weight: 400 !important;
+  fill: $color-text-grey !important;
+}
+
+.transaction-chart__chart .highcharts-tooltip text tspan:nth-child(1) {
+  font-size: 1.4rem !important;
+}

@@ -29,11 +29,11 @@
   }
 
   &__icon {
-    color: green;
+    color: $color-arrow-green;
     fill: currentColor;
 
     &--down {
-      color: red;
+      color: $color-arrow-red;
     }
   }
 }
