@@ -27,7 +27,7 @@ class Main extends Component {
               <WalletList />
             </div>
             <div className="side-column">
-              <TransactionHistory />
+              <TransactionHistory symbol={this.state.coinSymbol} />
             </div>
           </div>
         </section>

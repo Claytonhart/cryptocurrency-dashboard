@@ -369,7 +369,8 @@ body {
     margin-top: 2rem;
     padding: 2rem;
     flex: 1;
-    display: flex; }
+    display: flex;
+    align-items: center; }
   .transaction-list__desc {
     display: flex;
     flex-direction: column;
