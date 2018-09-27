@@ -4,6 +4,14 @@
   &__title {
     font-size: 3rem;
     margin-bottom: 2rem;
+
+    &:first-letter {
+      text-transform: capitalize;
+    }
+
+    span {
+      text-transform: uppercase;
+    }
   }
 }
 

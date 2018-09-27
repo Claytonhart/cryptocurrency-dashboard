@@ -6,7 +6,7 @@ class Navbar extends Component {
   render() {
     return (
       <nav className="navbar">
-        <Searchbar />
+        <Searchbar setCoin={this.props.setCoin} />
         <Masthead />
       </nav>
     );

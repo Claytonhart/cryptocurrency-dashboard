@@ -110,11 +110,14 @@ body {
     fill: currentColor; }
 
 .searchbar {
+  position: relative;
   background-color: #20273e;
   color: #878d9f;
   display: flex;
   align-items: center;
   flex: 0 0 40%; }
+  .searchbar__form {
+    width: 100%; }
   .searchbar__input {
     background-color: #20273e;
     color: #878d9f;
@@ -137,6 +140,12 @@ body {
     width: 1.75rem;
     fill: currentColor;
     z-index: 2; }
+  .searchbar__error {
+    position: absolute;
+    bottom: -2rem;
+    left: 2.5rem;
+    color: #d54153;
+    font-size: 1.2rem; }
 
 .navbar {
   display: flex;
@@ -188,6 +197,10 @@ body {
 .cryptochart__title {
   font-size: 3rem;
   margin-bottom: 2rem; }
+  .cryptochart__title:first-letter {
+    text-transform: capitalize; }
+  .cryptochart__title span {
+    text-transform: uppercase; }
 
 .highcharts-yaxis-grid .highcharts-grid-line {
   stroke: rgba(135, 141, 159, 0.4) !important; }

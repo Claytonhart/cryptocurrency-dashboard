@@ -28,6 +28,12 @@ class CryptoChart extends Component {
     this.getCryptoHistoryData();
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.coinSymbol !== this.props.coinSymbol) {
+      this.getCryptoHistoryData(this.props.coinSymbol.toUpperCase());
+    }
+  }
+
   createDataPoint = (time = Date.now(), magnitude = 1000, offset = 0) => {
     return [
       time + offset * magnitude,
@@ -44,8 +50,8 @@ class CryptoChart extends Component {
     return data;
   };
 
-  getCryptoHistoryData = async (coinName = "BTC") => {
-    const url = `https://min-api.cryptocompare.com/data/histoday?fsym=${coinName}&tsym=USD&limit=2000&aggregate=1&e=CCCAGG`;
+  getCryptoHistoryData = async (coinSymbol = "BTC") => {
+    const url = `https://min-api.cryptocompare.com/data/histoday?fsym=${coinSymbol}&tsym=USD&limit=2000&aggregate=1&e=CCCAGG`;
     let response = await axios.get(url);
     const { Data } = response.data;
     let data = [];
@@ -64,7 +70,10 @@ class CryptoChart extends Component {
   render() {
     return (
       <section className="cryptochart">
-        <h1 className="cryptochart__title">Bitcoin (BTC)</h1>
+        <h1 className="cryptochart__title">
+          {this.props.coinName || "Bitcoin"}{" "}
+          <span>({this.props.coinSymbol || "BTC"})</span>
+        </h1>
         <HighchartsStockChart>
           <Chart
             onClick={this.handleClick}

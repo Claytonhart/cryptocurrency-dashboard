@@ -1,4 +1,5 @@
 .searchbar {
+  position: relative;
   background-color: $color-background-blue;
   color: $color-text-grey;
   // height: 7rem;
@@ -6,6 +7,10 @@
   align-items: center;
   // margin-left: 5rem;
   flex: 0 0 40%;
+
+  &__form {
+    width: 100%;
+  }
 
   &__input {
     background-color: $color-background-blue;
@@ -35,5 +40,13 @@
     width: 1.75rem;
     fill: currentColor;
     z-index: 2;
+  }
+
+  &__error {
+    position: absolute;
+    bottom: -2rem;
+    left: 2.5rem;
+    color: $color-arrow-red;
+    font-size: 1.2rem;
   }
 }
