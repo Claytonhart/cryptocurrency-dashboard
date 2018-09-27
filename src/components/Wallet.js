@@ -3,6 +3,7 @@ import { Credit } from "./svg/Svg";
 
 class Wallet extends Component {
   render() {
+    const totalPrice = (this.props.price * this.props.num).toFixed(2);
     return (
       <div className="wallet">
         <div className="currency-info">
@@ -11,8 +12,10 @@ class Wallet extends Component {
           </div>
           <div className="currency-info__currency">
             <div className="currency-info__triangle" />
-            <p>20 Bitcoin</p>
-            <h3>$6945</h3>
+            <p>
+              {this.props.num} {this.props.name}
+            </p>
+            <h3>${totalPrice || "0"}</h3>
           </div>
         </div>
 

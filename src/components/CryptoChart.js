@@ -115,7 +115,7 @@ class CryptoChart extends Component {
             {/* <SplineSeries id="twitter" name="Twitter mentions" data={data2} /> */}
             <SplineSeries
               id="bitcoin"
-              name="Bitcoin price"
+              name={(this.props.coinName || "Bitcoin") + " price"}
               // data={[[1, 12], [2, 34], [3, 95], [4, 92], [5, 12], [6, 34]]}
               data={this.state.data}
             />

@@ -330,6 +330,14 @@ body {
   display: flex;
   justify-content: space-between; }
 
+.wallet-add {
+  width: 27.5rem;
+  border: 1px solid rgba(66, 71, 95, 0.6);
+  border-bottom: none;
+  border-radius: 2px;
+  height: 50%;
+  cursor: pointer; }
+
 .transaction-history {
   color: #878d9f; }
 

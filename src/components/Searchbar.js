@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { DebounceInput } from "react-debounce-input";
 
 import { MagnifyingGlass } from "./svg/Svg";
 
@@ -77,16 +76,6 @@ class Searchbar extends Component {
     return (
       <section className="searchbar">
         <MagnifyingGlass className="searchbar__search-img" />
-        {/* <DebounceInput
-          debounceTimeout={700}
-          value={this.state.searchValue}
-          onChange={this.handleChange}
-          name="searchValue"
-          type="text"
-          className="searchbar__input"
-          placeholder="Type in to search..."
-          autoComplete="off"
-        /> */}
         <form onSubmit={this.cryptoSearch} className="searchbar__form">
           <input
             value={this.state.searchValue}

@@ -4,12 +4,7 @@ import {
   HighchartsChart,
   Chart,
   withHighcharts,
-  XAxis,
-  YAxis,
-  Title,
   Legend,
-  ColumnSeries,
-  SplineSeries,
   PieSeries,
   Tooltip
 } from "react-jsx-highcharts";
