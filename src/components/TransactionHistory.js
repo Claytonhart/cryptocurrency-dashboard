@@ -11,7 +11,6 @@ class TransactionHistory extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    debugger;
     if (prevProps.symbol !== this.props.symbol) {
       this.getTransactionData(this.props.symbol.toUpperCase());
     }
@@ -25,7 +24,6 @@ class TransactionHistory extends Component {
       return transaction.close;
     });
     this.setState({ transactionList });
-    debugger;
   };
 
   render() {

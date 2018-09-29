@@ -1,12 +1,22 @@
 import React, { Component } from "react";
-import Sidebar from "./Sidebar";
+
 import Navbar from "./Navbar";
-import CryptoChart from "./CryptoChart";
-import WalletList from "./WalletList";
-import TransactionHistory from "./TransactionHistory";
+import Dashboard from "./Dashboard";
+import Transactions from "./Transactions";
 
 class Main extends Component {
-  state = {};
+  state = {
+    coinName: "bitcoin",
+    coinSymbol: "btc"
+  };
+
+  // componentDidUpdate(prevProps) {
+  //   debugger;
+  //   if (prevProps.active !== this.props.active) {
+  //     debugger;
+  //     console.log("updating!");
+  //   }
+  // }
 
   setCoin = coin => {
     this.setState({ coinName: coin[0], coinSymbol: coin[1] });
@@ -14,24 +24,16 @@ class Main extends Component {
 
   render() {
     return (
-      <main className="container">
-        <Sidebar />
-        <section className="main">
-          <Navbar setCoin={this.setCoin} />
-          <div className="main-content">
-            <div className="main-column">
-              <CryptoChart
-                coinName={this.state.coinName}
-                coinSymbol={this.state.coinSymbol}
-              />
-              <WalletList />
-            </div>
-            <div className="side-column">
-              <TransactionHistory symbol={this.state.coinSymbol} />
-            </div>
-          </div>
-        </section>
-      </main>
+      <section className="main">
+        <Navbar setCoin={this.setCoin} />
+        {this.props.active === "Dashboard" && (
+          <Dashboard
+            coinName={this.state.coinName}
+            coinSymbol={this.state.coinSymbol}
+          />
+        )}
+        {this.props.active === "Transactions" && <Transactions />}
+      </section>
     );
   }
 }

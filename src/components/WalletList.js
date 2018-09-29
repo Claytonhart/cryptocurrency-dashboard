@@ -15,7 +15,6 @@ class WalletList extends Component {
     const btc = data.BTC.USD;
     const eth = data.ETH.USD;
     this.setState({ btc, eth });
-    debugger;
   }
 
   render() {

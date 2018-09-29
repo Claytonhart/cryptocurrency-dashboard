@@ -71,8 +71,7 @@ class CryptoChart extends Component {
     return (
       <section className="cryptochart">
         <h1 className="cryptochart__title">
-          {this.props.coinName || "Bitcoin"}{" "}
-          <span>({this.props.coinSymbol || "BTC"})</span>
+          {this.props.coinName} <span>({this.props.coinSymbol})</span>
         </h1>
         <HighchartsStockChart>
           <Chart
@@ -115,7 +114,7 @@ class CryptoChart extends Component {
             {/* <SplineSeries id="twitter" name="Twitter mentions" data={data2} /> */}
             <SplineSeries
               id="bitcoin"
-              name={(this.props.coinName || "Bitcoin") + " price"}
+              name={this.props.coinName + " price"}
               // data={[[1, 12], [2, 34], [3, 95], [4, 92], [5, 12], [6, 34]]}
               data={this.state.data}
             />

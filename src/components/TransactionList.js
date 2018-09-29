@@ -6,7 +6,6 @@ class TransactionList extends Component {
     transactionList: []
   };
   componentDidUpdate(prevProps) {
-    debugger;
     if (prevProps.transactionList !== this.props.transactionList) {
       this.generateTransactionList();
     }
