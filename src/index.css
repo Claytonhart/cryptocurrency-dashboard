@@ -31,6 +31,7 @@ body {
 
 .container {
   min-height: 80rem;
+  max-height: 80rem;
   max-width: 140rem;
   min-width: 140rem;
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
@@ -39,8 +40,8 @@ body {
   display: flex; }
 
 .main {
-  margin: 2rem;
-  margin-left: 5rem;
+  padding: 2rem;
+  padding-left: 5rem;
   width: 100%;
   display: flex;
   flex-direction: column; }
@@ -151,7 +152,8 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 3rem; }
+  margin-bottom: 1rem;
+  min-height: 3.6rem; }
 
 .masthead {
   display: flex;
@@ -193,6 +195,9 @@ body {
   .masthead-about__job-title {
     color: #878d9f;
     text-align: end; }
+
+.dashboard {
+  margin-top: 2rem; }
 
 .cryptochart__title {
   font-size: 3rem;
@@ -407,3 +412,105 @@ body {
 
 .transaction-chart__chart .highcharts-tooltip text tspan:nth-child(1) {
   font-size: 1.4rem !important; }
+
+.wallets {
+  max-width: 90%;
+  margin-right: 2rem;
+  margin-top: 1rem; }
+  .wallets__info {
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(135, 141, 159, 0.2);
+    margin-bottom: 1rem; }
+  .wallets__scroll-under {
+    max-height: 56rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none; }
+    .wallets__scroll-under::-webkit-scrollbar {
+      display: none; }
+  .wallets__header {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400; }
+
+.coin-list {
+  display: flex;
+  justify-content: space-between; }
+  .coin-list__item-container {
+    display: flex;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem; }
+  .coin-list__item {
+    padding-bottom: 0.5rem;
+    cursor: pointer;
+    border-bottom: 1px solid transparent; }
+    .coin-list__item:not(:last-of-type) {
+      margin-right: 5rem; }
+    .coin-list__item:hover {
+      color: #617ae2;
+      border-bottom: 1px solid #617ae2; }
+    .coin-list__item--active {
+      color: #617ae2;
+      border-bottom: 1px solid #617ae2; }
+  .coin-list__add {
+    font-size: 1.4rem;
+    cursor: pointer; }
+    .coin-list__add:hover {
+      color: #617ae2; }
+
+.wallets-price-history {
+  display: flex; }
+  .wallets-price-history__item {
+    text-align: end;
+    text-transform: uppercase; }
+    .wallets-price-history__item p {
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+      color: #878d9f; }
+    .wallets-price-history__item h3 {
+      font-size: 2.5rem;
+      font-weight: 400; }
+    .wallets-price-history__item:not(:last-of-type) {
+      margin-right: 6rem; }
+
+.recent-transactions__header {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(135, 141, 159, 0.2); }
+
+.recent-transaction-left {
+  display: flex;
+  align-items: center; }
+
+.recent-transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(135, 141, 159, 0.2); }
+  .recent-transaction-item:not(:last-of-type) {
+    padding-bottom: 1rem; }
+  .recent-transaction-item__time {
+    font-size: 1.3rem;
+    color: #878d9f;
+    margin-left: 2rem;
+    margin-right: 3rem;
+    width: 5rem; }
+  .recent-transaction-item__icon {
+    fill: currentColor;
+    margin-right: 3rem; }
+  .recent-transaction-item__name {
+    display: flex;
+    flex-direction: column; }
+    .recent-transaction-item__name--title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem; }
+    .recent-transaction-item__name--desc {
+      color: #878d9f;
+      font-size: 1.1rem; }
+  .recent-transaction-item__amount {
+    font-size: 1.3rem; }

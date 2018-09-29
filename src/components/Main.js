@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import Navbar from "./Navbar";
 import Dashboard from "./Dashboard";
-import Transactions from "./Transactions";
+import Wallets from "./Wallets";
 
 class Main extends Component {
   state = {
@@ -32,7 +32,12 @@ class Main extends Component {
             coinSymbol={this.state.coinSymbol}
           />
         )}
-        {this.props.active === "Transactions" && <Transactions />}
+        {this.props.active === "Wallets" && (
+          <Wallets
+            coinName={this.state.coinName}
+            coinSymbol={this.state.coinSymbol}
+          />
+        )}
       </section>
     );
   }

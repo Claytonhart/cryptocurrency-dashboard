@@ -14,6 +14,7 @@ class Dashboard extends Component {
             <CryptoChart
               coinName={this.props.coinName}
               coinSymbol={this.props.coinSymbol}
+              dashboard={true}
             />
             <WalletList />
           </div>

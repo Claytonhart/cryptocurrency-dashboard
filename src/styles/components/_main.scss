@@ -1,5 +1,6 @@
 .container {
   min-height: 80rem;
+  max-height: 80rem;
   max-width: 140rem;
   // Temporary until content is added
   min-width: 140rem;
@@ -11,8 +12,8 @@
 }
 
 .main {
-  margin: 2rem;
-  margin-left: 5rem;
+  padding: 2rem;
+  padding-left: 5rem;
   width: 100%;
   display: flex;
   flex-direction: column;

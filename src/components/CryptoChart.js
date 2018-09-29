@@ -70,9 +70,11 @@ class CryptoChart extends Component {
   render() {
     return (
       <section className="cryptochart">
-        <h1 className="cryptochart__title">
-          {this.props.coinName} <span>({this.props.coinSymbol})</span>
-        </h1>
+        {this.props.dashboard && (
+          <h1 className="cryptochart__title">
+            {this.props.coinName} <span>({this.props.coinSymbol})</span>
+          </h1>
+        )}
         <HighchartsStockChart>
           <Chart
             onClick={this.handleClick}
@@ -120,10 +122,12 @@ class CryptoChart extends Component {
             />
           </YAxis>
 
-          <Navigator>
-            <Navigator.Series seriesId="profit" />
-            <Navigator.Series seriesId="bitcoin" />
-          </Navigator>
+          {this.props.dashboard && (
+            <Navigator>
+              <Navigator.Series seriesId="profit" />
+              <Navigator.Series seriesId="bitcoin" />
+            </Navigator>
+          )}
         </HighchartsStockChart>
       </section>
     );

@@ -7,7 +7,7 @@ class Sidebar extends Component {
   render() {
     const items = [
       ["Dashboard", Browser],
-      ["Transactions", Browser],
+      ["Wallets", Browser],
       ["Exchange", BarGraph],
       ["History", Folder],
       ["Settings", Cog]

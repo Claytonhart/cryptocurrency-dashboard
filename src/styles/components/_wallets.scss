@@ -1,0 +1,156 @@
+.wallets {
+  max-width: 90%;
+  margin-right: 2rem;
+  margin-top: 1rem;
+
+  &__info {
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba($color-text-grey, 0.2);
+    margin-bottom: 1rem;
+  }
+
+  &__scroll-under {
+    max-height: 56rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    -ms-overflow-style: none; // IE 10+
+    overflow: -moz-scrollbars-none; // Firefox
+    &::-webkit-scrollbar {
+      display: none; // Safari and Chrome
+    }
+  }
+
+  &__header {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+  }
+}
+
+.coin-list {
+  display: flex;
+  justify-content: space-between;
+
+  &__item-container {
+    display: flex;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+  }
+
+  &__item {
+    padding-bottom: 0.5rem;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+
+    &:not(:last-of-type) {
+      margin-right: 5rem;
+    }
+
+    &:hover {
+      color: $color-highlight-blue;
+      border-bottom: 1px solid $color-highlight-blue;
+    }
+
+    &--active {
+      color: $color-highlight-blue;
+      border-bottom: 1px solid $color-highlight-blue;
+    }
+  }
+
+  &__add {
+    font-size: 1.4rem;
+    cursor: pointer;
+    // margin-right: 8rem;
+
+    &:hover {
+      color: $color-highlight-blue;
+    }
+  }
+}
+
+.wallets-price-history {
+  display: flex;
+
+  &__item {
+    text-align: end;
+    text-transform: uppercase;
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+      color: $color-text-grey;
+    }
+
+    h3 {
+      font-size: 2.5rem;
+      font-weight: 400;
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 6rem;
+    }
+  }
+}
+
+.recent-transactions__header {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba($color-text-grey, 0.2);
+}
+
+.recent-transaction-left {
+  display: flex;
+  align-items: center;
+}
+
+.recent-transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid rgba($color-text-grey, 0.2);
+  // height: 10rem;
+
+  &:not(:last-of-type) {
+    padding-bottom: 1rem;
+  }
+
+  &__time {
+    font-size: 1.3rem;
+    color: $color-text-grey;
+    margin-left: 2rem;
+    margin-right: 3rem;
+    width: 5rem;
+  }
+
+  &__icon {
+    fill: currentColor;
+    margin-right: 3rem;
+  }
+
+  &__name {
+    display: flex;
+    flex-direction: column;
+
+    &--title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+
+    &--desc {
+      color: $color-text-grey;
+      font-size: 1.1rem;
+    }
+  }
+
+  &__amount {
+    font-size: 1.3rem;
+  }
+}
+
+// .wallets-chart {
+//   max-width: 90%;
+// }
