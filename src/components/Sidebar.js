@@ -5,82 +5,36 @@ import SidebarItem from "./SidebarItem";
 
 class Sidebar extends Component {
   render() {
+    const items = [
+      ["Dashboard", Browser],
+      ["Transactions", Browser],
+      ["Exchange", BarGraph],
+      ["History", Folder],
+      ["Settings", Cog]
+    ];
+
+    const sidebaritems = items.map(item => {
+      const IconName = item[1];
+      return (
+        <SidebarItem
+          key={item[0]}
+          setActiveComponent={this.props.setActiveComponent}
+          className={
+            this.props.active === item[0]
+              ? "side-nav__item side-nav__item--active"
+              : "side-nav__item"
+          }
+          itemName={item[0]}
+        >
+          <IconName className="side-nav__img" />
+        </SidebarItem>
+      );
+    });
     return (
       <nav className="sidebar">
         <ul className="side-nav">
           <li className="side-nav__logo">logo</li>
-          {/* <li
-            className="side-nav__item side-nav__item--active"
-            onClick={setActiveComponent.bind(this, "Dashboard")}
-          >
-            <a href="#main">
-              <Browser className="side-nav__img" />
-              <span>Dashboard</span>
-            </a>
-          </li>
-          <li
-            className="side-nav__item"
-            onClick={setActiveComponent.bind(this, "Transactions")}
-          >
-            <a href="#main">
-              <Browser className="side-nav__img" />
-              <span>Transactions</span>
-            </a>
-          </li>
-          <li className="side-nav__item">
-            <a href="#main">
-              <BarGraph className="side-nav__img" />
-              <span>Exchange</span>
-            </a>
-          </li>
-          <li className="side-nav__item">
-            <a href="#main">
-              <Folder className="side-nav__img" />
-              <span>History</span>
-            </a>
-          </li>
-          <li className="side-nav__item">
-            <a href="#main">
-              <Cog className="side-nav__img" />
-              <span>Settings</span>
-            </a>
-          </li> */}
-
-          <SidebarItem
-            setActiveComponent={this.props.setActiveComponent}
-            className="side-nav__item side-nav__item--active"
-            itemName="Dashboard"
-          >
-            <Browser className="side-nav__img" />
-          </SidebarItem>
-          <SidebarItem
-            setActiveComponent={this.props.setActiveComponent}
-            className="side-nav__item"
-            itemName="Transactions"
-          >
-            <Browser className="side-nav__img" />
-          </SidebarItem>
-          <SidebarItem
-            setActiveComponent={this.props.setActiveComponent}
-            className="side-nav__item"
-            itemName="Exchange"
-          >
-            <BarGraph className="side-nav__img" />
-          </SidebarItem>
-          <SidebarItem
-            setActiveComponent={this.props.setActiveComponent}
-            className="side-nav__item"
-            itemName="History"
-          >
-            <Folder className="side-nav__img" />
-          </SidebarItem>
-          <SidebarItem
-            setActiveComponent={this.props.setActiveComponent}
-            className="side-nav__item"
-            itemName="Settings"
-          >
-            <Cog className="side-nav__img" />
-          </SidebarItem>
+          {sidebaritems}
         </ul>
         <div className="color-mode">Dark mode</div>
       </nav>
