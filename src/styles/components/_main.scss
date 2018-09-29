@@ -36,3 +36,15 @@
   width: 20%;
   margin-left: 2rem;
 }
+
+.comingsoon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  h1 {
+    font-size: 6rem;
+    font-weight: 400;
+  }
+}

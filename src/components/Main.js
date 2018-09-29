@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import Navbar from "./Navbar";
 import Dashboard from "./Dashboard";
 import Wallets from "./Wallets";
+import ComingSoon from "./ComingSoon";
 
 class Main extends Component {
   state = {
@@ -38,6 +39,9 @@ class Main extends Component {
             coinSymbol={this.state.coinSymbol}
           />
         )}
+        {(this.props.active === "Exchange" ||
+          this.props.active === "History" ||
+          this.props.active === "Settings") && <ComingSoon />}
       </section>
     );
   }

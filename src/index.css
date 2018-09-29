@@ -61,6 +61,15 @@ body {
   width: 20%;
   margin-left: 2rem; }
 
+.comingsoon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; }
+  .comingsoon h1 {
+    font-size: 6rem;
+    font-weight: 400; }
+
 .sidebar {
   flex: 0 0 15%;
   display: flex;
