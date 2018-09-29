@@ -25,7 +25,7 @@ class CryptoChart extends Component {
   }
 
   componentDidMount() {
-    this.getCryptoHistoryData();
+    this.getCryptoHistoryData(this.props.coinSymbol.toUpperCase());
   }
 
   componentDidUpdate(prevProps) {
