@@ -21,7 +21,7 @@ class TransactionPieChart extends Component {
         y: 7
       },
       {
-        name: "Etherium",
+        name: "Ethereum",
         y: 11
       }
     ];

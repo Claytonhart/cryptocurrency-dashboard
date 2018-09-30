@@ -8,10 +8,10 @@ class SidebarItem extends Component {
         className={className}
         onClick={this.props.setActiveComponent.bind(this, itemName)}
       >
-        <a href="#main">
+        <button>
           {this.props.children}
           <span>{itemName}</span>
-        </a>
+        </button>
       </li>
     );
   }
