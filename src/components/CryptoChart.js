@@ -18,9 +18,9 @@ class CryptoChart extends Component {
   constructor(props) {
     super(props);
 
-    const now = Date.now();
+    // const now = Date.now();
     this.state = {
-      data1: this.createRandomData(now, 1e8, 200)
+      // data1: this.createRandomData(now, 1e8, 200)
     };
   }
 
@@ -34,21 +34,21 @@ class CryptoChart extends Component {
     }
   }
 
-  createDataPoint = (time = Date.now(), magnitude = 1000, offset = 0) => {
-    return [
-      time + offset * magnitude,
-      Math.round(Math.random() * 100 * 2) / 2 + 6000
-    ];
-  };
+  // createDataPoint = (time = Date.now(), magnitude = 1000, offset = 0) => {
+  //   return [
+  //     time + offset * magnitude,
+  //     Math.round(Math.random() * 100 * 2) / 2 + 6000
+  //   ];
+  // };
 
-  createRandomData = (time, magnitude, points = 100) => {
-    const data = [];
-    let i = points * -1 + 1;
-    for (i; i <= 0; i++) {
-      data.push(this.createDataPoint(time, magnitude, i));
-    }
-    return data;
-  };
+  // createRandomData = (time, magnitude, points = 100) => {
+  //   const data = [];
+  //   let i = points * -1 + 1;
+  //   for (i; i <= 0; i++) {
+  //     data.push(this.createDataPoint(time, magnitude, i));
+  //   }
+  //   return data;
+  // };
 
   getCryptoHistoryData = async (coinSymbol = "BTC") => {
     const url = `https://min-api.cryptocompare.com/data/histoday?fsym=${coinSymbol}&tsym=USD&limit=2000&aggregate=1&e=CCCAGG`;

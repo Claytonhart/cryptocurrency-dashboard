@@ -74,7 +74,7 @@ class RecentTransactions extends Component {
             </div>
             <div className="recent-transaction-item__name">
               <div className="recent-transaction-item__name--title">
-                {transaction[0] + " Bitcoin"}
+                {`${transaction[0]} ${this.props.coinName}`}
               </div>
               <div className="recent-transaction-item__name--desc">{`${
                 transaction[1]

@@ -7,7 +7,7 @@ import ComingSoon from "./ComingSoon";
 
 class Main extends Component {
   state = {
-    coinName: "bitcoin",
+    coinName: "Bitcoin",
     coinSymbol: "btc"
   };
 
@@ -35,6 +35,7 @@ class Main extends Component {
         )}
         {this.props.active === "Wallets" && (
           <Wallets
+            setCoin={this.setCoin}
             coinName={this.state.coinName}
             coinSymbol={this.state.coinSymbol}
           />
