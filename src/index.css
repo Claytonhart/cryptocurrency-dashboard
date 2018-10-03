@@ -34,7 +34,7 @@ body {
   width: 100vw; }
 
 .container {
-  max-height: 80rem;
+  height: 80rem;
   max-width: 90%;
   width: 140rem;
   margin: 0 auto;
@@ -49,9 +49,6 @@ body {
   flex: 1 1 85%;
   display: flex;
   flex-direction: column; }
-
-.dashboard {
-  max-width: 99%; }
 
 .main-content {
   display: flex;
@@ -216,7 +213,8 @@ body {
     text-align: end; }
 
 .dashboard {
-  margin-top: 2rem; }
+  margin-top: 2rem;
+  max-width: 100%; }
 
 .cryptochart__title {
   font-size: 3rem;
@@ -548,3 +546,49 @@ body {
       font-size: 1.1rem; }
   .recent-transaction-item__amount {
     font-size: 1.3rem; }
+
+.exchange {
+  margin-top: 1rem;
+  max-width: 95%;
+  max-height: 100%; }
+  .exchange__title {
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem; }
+
+.exchange-list {
+  max-height: 62.3rem;
+  border-radius: 4px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none; }
+  .exchange-list::-webkit-scrollbar {
+    display: none; }
+  .exchange-list__header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #617ae2; }
+  .exchange-list__header-item {
+    padding: 1.6rem 2rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    flex: 1; }
+    .exchange-list__header-item:last-of-type {
+      flex: 0;
+      min-width: 10rem;
+      text-align: right; }
+
+.exchange-list-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(66, 71, 95, 0.6); }
+  .exchange-list-item__item {
+    padding: 1.6rem 2rem;
+    font-size: 1.2rem;
+    flex: 1; }
+    .exchange-list-item__item:last-of-type {
+      flex: 0;
+      min-width: 10rem;
+      text-align: right; }

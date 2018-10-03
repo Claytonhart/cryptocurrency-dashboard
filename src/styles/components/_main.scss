@@ -8,7 +8,8 @@
 
 .container {
   // min-height: 80rem;
-  max-height: 80rem;
+  // max-height: 80rem;
+  height: 80rem;
   max-width: 90%;
   // Temporary until content is added
   width: 140rem;
@@ -26,10 +27,6 @@
   flex: 1 1 85%;
   display: flex;
   flex-direction: column;
-}
-
-.dashboard {
-  max-width: 99%;
 }
 
 .main-content {

@@ -4,7 +4,7 @@ import Sidebar from "./components/Sidebar";
 
 class App extends Component {
   state = {
-    active: "Dashboard"
+    active: "Exchange"
   };
   setActiveComponent = name => {
     this.setState({ active: name });
