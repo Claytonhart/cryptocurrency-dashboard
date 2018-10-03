@@ -1,17 +1,19 @@
 .transaction-list {
-  height: 65%;
+  // height: 65%;
   &__container {
+    margin-top: 1rem;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     height: 100%;
   }
 
   &__item {
     border: $border-light-grey;
     border-radius: 2px;
-    margin-top: 2rem;
+    // margin-top: 2rem;
     padding: 2rem;
-    flex: 1;
     display: flex;
     align-items: center;
   }

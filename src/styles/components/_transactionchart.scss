@@ -1,7 +1,7 @@
 .transaction-chart {
   border: $border-light-grey;
   border-radius: 2px;
-  // height: 35%;
+  min-height: 29rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

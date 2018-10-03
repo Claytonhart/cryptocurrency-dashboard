@@ -54,9 +54,14 @@
   fill: rgba($color-highlight-blue, 0.2);
 }
 
-.highcharts-range-selector-buttons {
-  transform: translate(71%, 0px);
+.highcharts-container,
+.highcharts-container svg {
+  width: 100% !important;
 }
+
+// .highcharts-range-selector-buttons {
+//   transform: translate(71%, 0px);
+// }
 
 .highcharts-button-pressed .highcharts-button-box {
   fill: $color-text-dark-grey;

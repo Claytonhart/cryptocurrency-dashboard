@@ -31,11 +31,11 @@ class TransactionList extends Component {
 
   render() {
     return (
-      <section className="transaction-list">
-        <ul className="transaction-list__container">
-          {this.state.transactionList}
-        </ul>
-      </section>
+      // <section className="transaction-list">
+      <ul className="transaction-list__container">
+        {this.state.transactionList}
+      </ul>
+      // </section>
     );
   }
 }

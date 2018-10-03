@@ -17,9 +17,6 @@ html {
 body {
   box-sizing: border-box;
   background-color: #c3c6d1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
   width: 100vw; }
 
@@ -29,11 +26,18 @@ ul {
 body {
   font-family: "Montserrat", sans-serif; }
 
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw; }
+
 .container {
-  min-height: 80rem;
   max-height: 80rem;
-  max-width: 140rem;
-  min-width: 140rem;
+  max-width: 90%;
+  width: 140rem;
+  margin: 0 auto;
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   background-color: #20273e;
   color: #fff;
@@ -42,23 +46,25 @@ body {
 .main {
   padding: 2rem;
   padding-left: 5rem;
-  width: 100%;
+  flex: 1 1 85%;
   display: flex;
   flex-direction: column; }
+
+.dashboard {
+  max-width: 99%; }
 
 .main-content {
   display: flex;
   flex: 1; }
 
 .main-column {
-  flex: 1;
-  width: 80%;
+  flex: 1 1 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
 
 .side-column {
-  width: 20%;
+  flex: 1 0 20%;
   margin-left: 2rem; }
 
 .comingsoon {
@@ -95,6 +101,7 @@ body {
       text-decoration: none;
       z-index: 10;
       display: flex;
+      align-items: center;
       padding: 1.5rem 0;
       padding-left: 4rem;
       cursor: pointer; }
@@ -249,8 +256,9 @@ body {
 .highcharts-navigator-mask-inside {
   fill: rgba(97, 122, 226, 0.2); }
 
-.highcharts-range-selector-buttons {
-  transform: translate(71%, 0px); }
+.highcharts-container,
+.highcharts-container svg {
+  width: 100% !important; }
 
 .highcharts-button-pressed .highcharts-button-box {
   fill: #42475f; }
@@ -282,7 +290,7 @@ body {
   fill: #617ae2 !important; }
 
 .wallet {
-  width: 27.5rem;
+  flex: 0 1 30%;
   border: 1px solid rgba(66, 71, 95, 0.6);
   border-radius: 2px; }
 
@@ -343,12 +351,12 @@ body {
     padding-bottom: 1rem; }
 
 .wallet-list {
-  margin-top: 0.5rem;
+  margin-top: 3rem;
   display: flex;
   justify-content: space-between; }
 
 .wallet-add {
-  width: 27.5rem;
+  flex: 0 1 30%;
   border: 1px solid rgba(66, 71, 95, 0.6);
   border-bottom: none;
   border-radius: 2px;
@@ -356,11 +364,16 @@ body {
   cursor: pointer; }
 
 .transaction-history {
-  color: #878d9f; }
+  color: #878d9f;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%; }
 
 .transaction-chart {
   border: 1px solid rgba(66, 71, 95, 0.6);
   border-radius: 2px;
+  min-height: 29rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -382,34 +395,36 @@ body {
     display: flex;
     justify-content: space-between; }
 
-.transaction-list {
-  height: 65%; }
-  .transaction-list__container {
-    display: flex;
-    flex-direction: column;
-    height: 100%; }
-  .transaction-list__item {
-    border: 1px solid rgba(66, 71, 95, 0.6);
-    border-radius: 2px;
-    margin-top: 2rem;
-    padding: 2rem;
-    flex: 1;
-    display: flex;
-    align-items: center; }
-  .transaction-list__desc {
-    display: flex;
-    flex-direction: column;
-    margin-left: 1.5rem;
-    color: #fff;
-    font-size: 1.3rem; }
-    .transaction-list__desc span {
-      color: #878d9f;
-      font-size: 0.9rem; }
-  .transaction-list__icon {
-    color: #03af81;
-    fill: currentColor; }
-    .transaction-list__icon--down {
-      color: #d54153; }
+.transaction-list__container {
+  margin-top: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; }
+
+.transaction-list__item {
+  border: 1px solid rgba(66, 71, 95, 0.6);
+  border-radius: 2px;
+  padding: 2rem;
+  display: flex;
+  align-items: center; }
+
+.transaction-list__desc {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.5rem;
+  color: #fff;
+  font-size: 1.3rem; }
+  .transaction-list__desc span {
+    color: #878d9f;
+    font-size: 0.9rem; }
+
+.transaction-list__icon {
+  color: #03af81;
+  fill: currentColor; }
+  .transaction-list__icon--down {
+    color: #d54153; }
 
 .transaction-chart__chart .highcharts-container {
   height: 25rem !important; }
@@ -426,7 +441,7 @@ body {
   font-size: 1.4rem !important; }
 
 .wallets {
-  max-width: 90%;
+  max-width: 95%;
   margin-right: 2rem;
   margin-top: 1rem; }
   .wallets__info {

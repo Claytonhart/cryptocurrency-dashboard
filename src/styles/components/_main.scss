@@ -1,9 +1,18 @@
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
 .container {
-  min-height: 80rem;
+  // min-height: 80rem;
   max-height: 80rem;
-  max-width: 140rem;
+  max-width: 90%;
   // Temporary until content is added
-  min-width: 140rem;
+  width: 140rem;
+  margin: 0 auto;
   // End Temporary
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   background-color: $color-background-blue;
@@ -14,9 +23,13 @@
 .main {
   padding: 2rem;
   padding-left: 5rem;
-  width: 100%;
+  flex: 1 1 85%;
   display: flex;
   flex-direction: column;
+}
+
+.dashboard {
+  max-width: 99%;
 }
 
 .main-content {
@@ -25,15 +38,16 @@
 }
 
 .main-column {
-  flex: 1;
-  width: 80%;
+  flex: 1 1 80%;
+  // max-width: 80%;
+  // flex-basis: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .side-column {
-  width: 20%;
+  flex: 1 0 20%;
   margin-left: 2rem;
 }
 

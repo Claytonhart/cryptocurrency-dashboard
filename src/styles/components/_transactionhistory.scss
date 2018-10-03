@@ -1,4 +1,7 @@
 .transaction-history {
   color: $color-text-grey;
-  // height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
 }
