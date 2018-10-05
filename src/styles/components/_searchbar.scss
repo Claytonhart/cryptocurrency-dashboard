@@ -20,7 +20,7 @@
     padding-left: 4rem;
     margin-left: -3rem;
     font-family: inherit;
-    transition: all 0.2s;
+    transition: border 0.2s;
     width: 90%;
     border: 1px solid $color-background-blue;
 
@@ -49,4 +49,8 @@
     color: $color-arrow-red;
     font-size: 1.2rem;
   }
+}
+
+.searchbar-display-none {
+  visibility: hidden;
 }

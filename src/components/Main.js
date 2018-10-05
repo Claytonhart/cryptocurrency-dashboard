@@ -5,6 +5,7 @@ import Dashboard from "./Dashboard";
 import Wallets from "./Wallets";
 import ComingSoon from "./ComingSoon";
 import Exchange from "./Exchange";
+import History from "./History";
 
 class Main extends Component {
   state = {
@@ -27,7 +28,7 @@ class Main extends Component {
   render() {
     return (
       <section className="main">
-        <Navbar setCoin={this.setCoin} />
+        <Navbar setCoin={this.setCoin} active={this.props.active} />
         {this.props.active === "Dashboard" && (
           <Dashboard
             coinName={this.state.coinName}
@@ -42,8 +43,8 @@ class Main extends Component {
           />
         )}
         {this.props.active === "Exchange" && <Exchange />}
-        {(this.props.active === "History" ||
-          this.props.active === "Settings") && <ComingSoon />}
+        {this.props.active === "History" && <History />}
+        {this.props.active === "Settings" && <ComingSoon />}
       </section>
     );
   }

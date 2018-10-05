@@ -73,8 +73,12 @@ class Searchbar extends Component {
   };
 
   render() {
+    const className =
+      this.props.active === "Dashboard" || this.props.active === "Wallets"
+        ? "searchbar"
+        : "searchbar searchbar-display-none";
     return (
-      <section className="searchbar">
+      <section className={className}>
         <MagnifyingGlass className="searchbar__search-img" />
         <form onSubmit={this.cryptoSearch} className="searchbar__form">
           <input

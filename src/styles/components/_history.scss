@@ -1,0 +1,13 @@
+.history {
+  margin-top: 2rem;
+  max-width: 95%;
+}
+
+.history-list {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    background-color: $color-highlight-blue;
+    margin-top: 3rem;
+  }
+}

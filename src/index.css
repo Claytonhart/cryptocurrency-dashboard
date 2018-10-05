@@ -143,7 +143,7 @@ body {
     padding-left: 4rem;
     margin-left: -3rem;
     font-family: inherit;
-    transition: all 0.2s;
+    transition: border 0.2s;
     width: 90%;
     border: 1px solid #20273e; }
     .searchbar__input:focus {
@@ -163,6 +163,9 @@ body {
     left: 2.5rem;
     color: #d54153;
     font-size: 1.2rem; }
+
+.searchbar-display-none {
+  visibility: hidden; }
 
 .navbar {
   display: flex;
@@ -592,3 +595,13 @@ body {
       flex: 0;
       min-width: 10rem;
       text-align: right; }
+
+.history {
+  margin-top: 2rem;
+  max-width: 95%; }
+
+.history-list__header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #617ae2;
+  margin-top: 3rem; }
