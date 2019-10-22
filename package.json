@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "http://Claytonhart.github.io/cryptocurrency",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "gh-pages": "^2.0.0",
     "highcharts": "^6.0.0",
     "node-sass-chokidar": "^1.3.3",
