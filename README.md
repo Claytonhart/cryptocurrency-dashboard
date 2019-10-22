@@ -1,6 +1,6 @@
 ## Cryptocurrency Dashboard (WIP)
 
-Live version currently hosted at [Cryptocurrency Dashboard](https://claytonhart.github.io/cryptocurrency/)
+Live version currently hosted at [Cryptocurrency Dashboard](https://claytonhart.github.io/cryptocurrency-dashboard/)
 
 Cryptocurrency Dashboard is my current project as of Sept. 26, 2018
 
